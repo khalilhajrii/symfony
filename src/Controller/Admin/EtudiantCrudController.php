@@ -19,9 +19,9 @@ class EtudiantCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('nce'),
+            IdField::new('nce')->hideOnForm(),
             TextField::new('nom'),
-            TextEditorField::new('prenom'),
+            TextField::new('prenom'),
         ];
     }
     
